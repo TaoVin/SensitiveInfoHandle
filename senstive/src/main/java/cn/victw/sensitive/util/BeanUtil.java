@@ -45,8 +45,7 @@ public final class BeanUtil implements BeanFactoryPostProcessor {
      * @throws org.springframework.beans.BeansException
      */
     public static <T> T getBean(Class<T> clz) throws BeansException {
-        T result = (T) getBeanFactory().getBean(clz);
-        return result;
+        return getBeanFactory().getBean(clz);
     }
 
 }

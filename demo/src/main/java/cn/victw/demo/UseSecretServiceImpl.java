@@ -2,7 +2,6 @@ package cn.victw.demo;
 
 import cn.victw.sensitive.annotation.SensitiveMethod;
 import cn.victw.sensitive.service.UseSecretService;
-import cn.victw.sensitive.util.BeanUtil;
 import cn.victw.sensitive.util.RequestUtil;
 import org.springframework.stereotype.Service;
 

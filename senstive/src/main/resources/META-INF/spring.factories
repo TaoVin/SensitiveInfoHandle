@@ -1,1 +1,4 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.victw.sensitive.config.SensitiveAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.victw.sensitive.config.SensitiveAutoConfiguration, \
+  cn.victw.sensitive.config.UserSecretAutoConfiguration, \
+  cn.victw.sensitive.util.BeanUtil

@@ -3,6 +3,8 @@ package cn.victw.sensitive.service.impl;
 import cn.victw.sensitive.annotation.SensitiveMethod;
 import cn.victw.sensitive.service.UseSecretService;
 import cn.victw.sensitive.util.RequestUtil;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,8 +18,6 @@ import java.util.Objects;
  * @date 2022/7/25 21:53
  */
 public class UseSecretServiceImpl implements UseSecretService {
-
-
 
     @Override
     public Boolean useSecret() {

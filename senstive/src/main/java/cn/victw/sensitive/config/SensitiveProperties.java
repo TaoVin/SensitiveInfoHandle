@@ -1,6 +1,7 @@
 package cn.victw.sensitive.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
@@ -10,6 +11,7 @@ import java.io.Serializable;
  * @author Vincent Tao
  * @date 2022/7/23 13:53
  */
+@Component
 @SuppressWarnings("serial")
 @ConfigurationProperties(prefix = "sensitive")
 public class SensitiveProperties implements Serializable {

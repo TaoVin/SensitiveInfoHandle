@@ -17,11 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
-    private UseSecretService useSecretService;
-
     @GetMapping("/getUser")
-    @SensitiveMethod(useDes = false)
+    @SensitiveMethod
     public User getUserInfo(String phone) {
         return new User(1L, "张三", phone, "320400192509071234");
     }

@@ -22,7 +22,7 @@ public class User {
     /**
      * 用户名
      */
-    @Sensitive(des = DesensitizationType.USER_NAME)
+    @Sensitive(customDes = CustomDesensitizationService.class)
     private String userName;
 
 

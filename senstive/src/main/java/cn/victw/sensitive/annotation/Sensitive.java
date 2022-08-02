@@ -3,6 +3,7 @@ package cn.victw.sensitive.annotation;
 
 import cn.victw.sensitive.rules.DesensitizationType;
 import cn.victw.sensitive.serializer.SecretSerializer;
+import cn.victw.sensitive.service.impl.DefaultDesensitization;
 import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -21,5 +22,17 @@ import java.lang.annotation.Target;
 @JsonSerialize(using = SecretSerializer.class)
 public @interface Sensitive {
 
-    DesensitizationType des();
+    /**
+     * 默认不使用
+     *
+     * @return
+     */
+    DesensitizationType des() default DesensitizationType.OTHER;
+
+    /**
+     * 自定义的实现类,默认不使用
+     *
+     * @return
+     */
+    Class<?> customDes() default DefaultDesensitization.class;
 }

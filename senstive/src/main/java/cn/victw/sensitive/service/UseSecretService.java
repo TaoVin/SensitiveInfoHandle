@@ -1,5 +1,7 @@
 package cn.victw.sensitive.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 脱敏自定义拓展
  *
